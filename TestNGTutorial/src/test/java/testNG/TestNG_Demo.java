@@ -1,5 +1,9 @@
 package testNG;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -33,6 +37,30 @@ public class TestNG_Demo {
 		
 		public void googleTitleTest() {
 			System.out.println("Google title");
+		}
+		
+		@Test
+		public void googleSearchTest() {
+			System.out.println("Google search");
+		}
+		
+		@AfterMethod
+		public void closeGoogle() {
+			System.out.println("Google closed");
+		}
+		
+		@AfterTest
+		public void closeBrowser() {
+			System.out.println("Browser closed");
+		}
+		
+		@AfterClass
+		public void downloadReport() {
+			System.out.println("Report downloaded");
+		}
+		@AfterSuite
+		public void sendReport() {
+			System.out.println("Send Report");
 		}
 
 }

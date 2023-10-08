@@ -1,8 +1,7 @@
 package testNG;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -23,8 +22,8 @@ public class AssertionsDemo {
 	@Test
 	public void setUp() {
 		
-	System.setProperty("webDriver.chrome.driver","C:\\Users\\nanda\\OneDrive\\Documents\\Nanda\\chromedriver_win32\\chromedriver.exe");
-	driver=new ChromeDriver();
+	System.setProperty("webDriver.edge.driver","C:\\Users\\nanda\\OneDrive\\Desktop\\Documents\\Nanda\\edgedriver_win64\\msedgedriver.exe");
+	driver=new EdgeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://www.google.com");
 	String actTitle=driver.getTitle();
